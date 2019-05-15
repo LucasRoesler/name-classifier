@@ -1,7 +1,7 @@
 # Classify Name
 
 ### Training
-You can retrain the model using
+After adding more datat to `/classify/function/data/names`, you can retrain the model using
 
 ```bash
 cd classify/function/core/
