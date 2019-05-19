@@ -1,6 +1,2 @@
-flask
-gevent
-python-dateutil==2.7.3
-numpy==1.15.2
 pytorch-cpu
 torchvision-cpu

@@ -22,3 +22,12 @@ class RNN(nn.Module):
 
     def initHidden(self):
         return Variable(torch.zeros(1, self.hidden_size))
+
+
+def evaluate(line_tensor, rnn):
+    hidden = rnn.initHidden()
+
+    for i in range(line_tensor.size()[0]):
+        output, hidden = rnn(line_tensor[i], hidden)
+
+    return output

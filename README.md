@@ -4,7 +4,7 @@
 After adding more datat to `/classify/function/data/names`, you can retrain the model using
 
 ```bash
-cd classify/function/core/
+cd classify/
 python train.py
 cd -
 ```
@@ -13,7 +13,15 @@ cd -
 ### Build
 
 ```bash
+faas-cli template pull https://github.com/LucasRoesler/pydatascience-template.git
 faas-cli build classify --tag sha
+```
+
+### Quick test
+
+```bash
+docker run -it -p 8080:8080 theaxer/classify:latest
+curl -X POST http://localhost:8080 -d "Bob"
 ```
 
 ### Deploy
