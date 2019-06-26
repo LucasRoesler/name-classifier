@@ -3,6 +3,6 @@ provider:
   gateway: http://127.0.0.1:31112
 functions:
   classify:
-    lang: pydatatscience
+    lang: pydatascience
     handler: ./classify
     image: theaxer/classify:latest
