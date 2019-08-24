@@ -1,0 +1,20 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v1
+    - uses: LucasRoesler/openfaas-action/template_store_pull@master
+      name: Fetch Template
+      with:
+        repository_url: "https://github.com/LucasRoesler/pydatascience-template.git"
+    - uses: LucasRoesler/openfaas-action/build@master
+      name: Build
+      with:
+        path: "stack.yml"
+        tag: "sha"
