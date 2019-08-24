@@ -9,7 +9,7 @@ jobs:
     
     steps:
     - uses: actions/checkout@v1
-    - uses: LucasRoesler/openfaas-action/template_store_pull@master
+    - uses: LucasRoesler/openfaas-action/template_pull@master
       name: Fetch Template
       with:
         repository_url: "https://github.com/LucasRoesler/pydatascience-template.git"
